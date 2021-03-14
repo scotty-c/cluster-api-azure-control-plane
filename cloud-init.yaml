@@ -8,5 +8,5 @@ runcmd:
 - export HOME='/home/ubuntu'
 - export USER='ubuntu'
 - cd $HOME
-- curl -L -o cloud-init.sh 'https://raw.githubusercontent.com/asw101/2021/main/dev/keda/cloud-init.sh'
+- curl -L -o cloud-init.sh 'https://raw.githubusercontent.com/scotty-c/cluster-api-dev/main/cloud-init.sh'
 - bash cloud-init.sh | tee output.txt
