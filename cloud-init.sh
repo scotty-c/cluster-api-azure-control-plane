@@ -39,4 +39,9 @@ mkdir -p $HOME/.k9s/
 echo "# az cli..."
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
+echo "# capz..."
+git clone https://github.com/ams0/azure-managed-cluster-capz-helm.git
+cd azure-managed-cluster-capz-helm
+clusterctl init --infrastructure azure
+
 echo "# complete!"
