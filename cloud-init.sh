@@ -7,6 +7,11 @@ echo "# make..."
 sudo apt-get install -y \
         make
 
+echo "# motd ..."
+curl -L -o 01-custom 'https://raw.githubusercontent.com/scotty-c/cluster-api-dev/main/01-custom'
+mv 01-custom /etc/update-motd.d/
+sudo chmod +x /etc/update-motd.d/01-custom
+
 echo "# microk8s..."
 sudo snap install microk8s --classic --channel=1.19
 mkdir -p $HOME/.kube/
@@ -43,10 +48,5 @@ echo "# capz..."
 curl -L https://github.com/kubernetes-sigs/cluster-api/releases/download/v0.3.14/clusterctl-linux-amd64 -o clusterctl
 chmod +x ./clusterctl
 sudo mv ./clusterctl /usr/local/bin/clusterctl
-
-echo "# motd ..."
-curl -L -o 01-custom 'https://raw.githubusercontent.com/scotty-c/cluster-api-dev/main/01-custom'
-mv 01-custom /etc/update-motd.d/
-sudo chmod +x /etc/update-motd.d/01-custom
 
 echo "# complete!"

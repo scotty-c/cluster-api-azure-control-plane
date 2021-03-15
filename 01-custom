@@ -1,5 +1,8 @@
 #!/bin/sh
 
+echo 'If the below commands are not available follow the install log'
+echo 'tail -f output.txt'
+
 echo '# Sign into your Azure account' 
 echo 'az login'
 echo 'export AZURE_SUBSCRIPTION_ID="<SubscriptionId>"'
