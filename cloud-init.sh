@@ -40,8 +40,8 @@ echo "# az cli..."
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 echo "# capz..."
-git clone https://github.com/ams0/azure-managed-cluster-capz-helm.git
-cd azure-managed-cluster-capz-helm
-clusterctl init --infrastructure azure
+curl -L https://github.com/kubernetes-sigs/cluster-api/releases/download/v0.3.14/clusterctl-linux-amd64 -o clusterctl
+chmod +x ./clusterctl
+sudo mv ./clusterctl /usr/local/bin/clusterctl
 
 echo "# complete!"

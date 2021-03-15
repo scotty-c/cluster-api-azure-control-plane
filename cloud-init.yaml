@@ -3,6 +3,7 @@
 
 packages:
 - jq
+- git
 
 runcmd:
 - export HOME='/home/ubuntu'
