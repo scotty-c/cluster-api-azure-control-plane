@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo ""
 echo 'Welcome to your Azure Cluster API machine'
 echo ''
 echo 'If the below commands are not available follow the install log'
