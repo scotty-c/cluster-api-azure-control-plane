@@ -1,25 +1,28 @@
 #!/bin/sh
 
+echo 'Welcome to your Azure Cluster API machine'
+echo ''
 echo 'If the below commands are not available follow the install log'
 echo 'tail -f output.txt'
-
+echo ''
 echo '# Sign into your Azure account' 
 echo 'az login'
 echo 'export AZURE_SUBSCRIPTION_ID="<SubscriptionId>"'
-
+echo ''
 echo '# Create an Azure Service Principal and paste the output here'
 echo 'export AZURE_TENANT_ID="<Tenant>"'
 echo 'export AZURE_CLIENT_ID="<AppId>"'
 echo 'export AZURE_CLIENT_SECRET="<Password>"'
-
+echo ''
 echo '# Azure cloud settings'
 echo '# To use the default public cloud, otherwise set to AzureChinaCloud|AzureGermanCloud|AzureUSGovernmentCloud'
 echo 'export AZURE_ENVIRONMENT="AzurePublicCloud"'
-
+echo ''
 echo 'export AZURE_SUBSCRIPTION_ID_B64="$(echo -n "$AZURE_SUBSCRIPTION_ID" | base64 | tr -d '\n')"'
 echo 'export AZURE_TENANT_ID_B64="$(echo -n "$AZURE_TENANT_ID" | base64 | tr -d '\n')"'
 echo 'export AZURE_CLIENT_ID_B64="$(echo -n "$AZURE_CLIENT_ID" | base64 | tr -d '\n')"'
 echo 'export AZURE_CLIENT_SECRET_B64="$(echo -n "$AZURE_CLIENT_SECRET" | base64 | tr -d '\n')"'
-
+echo ''
 echo '# Finally, initialize the management cluster'
 echo 'clusterctl init --infrastructure azure'
+echo ''
