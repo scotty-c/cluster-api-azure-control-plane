@@ -58,4 +58,15 @@ export AZURE_CLIENT_SECRET_B64="$(echo -n "$AZURE_CLIENT_SECRET" | base64 | tr -
 clusterctl init --infrastructure azure
 ```
 ## Running on Azure
-comming soon !!!!
+To run this on Azure we will use exactly the same code. We will make the assumption that you have the [Azure cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) that is signed into to your subscription. 
+
+Then just run the script `./deploy-azure.sh`  
+The script will ask you a couple of questions 
+```
+Enter the subscription to use: 
+Enter the resource group for the vm: 
+Enter the name for the vm:
+```
+Then print out the instructions to access the server.  
+Once you have access to the servers shell just `tail -f output.txt`  
+The MOTD will give you the rest of the instructions. 
