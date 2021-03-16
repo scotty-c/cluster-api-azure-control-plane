@@ -72,4 +72,4 @@ Once you have access to the servers shell just `tail -f output.txt`
 The MOTD will give you the rest of the instructions. 
 
 ## Thank you 
-A big thanks goes to [Aarron Wislang](https://github.com/asw101) for some the original code and ideas that I implemented in this repo :)
+A big thanks goes to [Aaron Wislang](https://github.com/asw101) for some the original code and ideas that I implemented in this repo :)
