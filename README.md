@@ -58,7 +58,7 @@ export AZURE_CLIENT_SECRET_B64="$(echo -n "$AZURE_CLIENT_SECRET" | base64 | tr -
 clusterctl init --infrastructure azure
 ```
 ## Running on Azure
-To run this on Azure we will use exactly the same code. We will make the assumption that you have the [Azure cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) that is signed into to your subscription. 
+To run this on Azure we will use exactly the same code. We will make the assumption that you have the [Azure cli](https://docs.microsoft.com/cli/azure/install-azure-cli?WT.mc_id=opensource-0000-sccoulto) that is signed into to your subscription. 
 
 Then just run the script `./deploy-azure.sh`  
 The script will ask you a couple of questions 
