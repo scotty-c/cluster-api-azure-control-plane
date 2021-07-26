@@ -5,7 +5,7 @@ The idea behind this repo was to make it super easy to spin up a Kubernetes cont
 This will work both locally or on Azure as it based on [cloud-init](https://cloudinit.readthedocs.io/en/latest/)  
 
 ## Running locally 
-When runnning the server locally you will need to install [multipass](https://multipass.run/).  
+When running the server locally you will need to install [multipass](https://multipass.run/).  
 This is an open source project from canonical which will work on Windows, MacOS and Linux. So what ever you OS you choose to develop on multipass will have you covered. This is the only dependancy of the project. 
 
 Once multipass is installed just run the following 
