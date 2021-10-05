@@ -5,13 +5,11 @@ set -o pipefail
 
 read -p "Enter the subscription to use: "  SUB
 read -p "Enter region to deploy the cluster: "  LOCATION
-read -p "Enter Kubernetes version you want to deploy: " K8SVER
 
 az account set --subscription "$SUB"
 
 CLUSTER_RG=cluster-api
 SP_NAME=cluster-api
-
 
 pre_checks () {
 RG_THERE=$(az group exists --name $CLUSTER_RG)
