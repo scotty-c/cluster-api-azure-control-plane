@@ -41,7 +41,8 @@ echo "# az cli..."
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 echo "# capz..."
-curl -L https://github.com/kubernetes-sigs/cluster-api/releases/download/v0.3.14/clusterctl-linux-amd64 -o clusterctl
+VERSION='0.4.2'
+curl -L https://github.com/kubernetes-sigs/cluster-api/releases/download/v${VERSION}/clusterctl-linux-amd64 -o clusterctl
 chmod +x ./clusterctl
 sudo mv ./clusterctl /usr/local/bin/clusterctl
 
