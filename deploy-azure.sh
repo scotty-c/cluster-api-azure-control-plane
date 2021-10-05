@@ -23,7 +23,7 @@ az vm create \
   --ssh-key-values ~/.ssh/id_rsa.pub
    
 
-IP=$(az vm show -d  --resource-group cluster-api --name cluster-api --query publicIps -o tsv
+IP=$(az vm show -d  --resource-group $RS --name $NAME --query publicIps -o tsv
 )
 
 echo "Access your vm with  ssh ubuntu@$IP"
