@@ -8,6 +8,10 @@ curl -L -o 01-custom 'https://raw.githubusercontent.com/scotty-c/cluster-api-dev
 mv 01-custom /etc/update-motd.d/
 sudo chmod +x /etc/update-motd.d/01-custom
 
+echo "# cluster deploy script..."
+curl -L -o cluster-deploy.sh https://raw.githubusercontent.com/scotty-c/cluster-api-azure-control-plane/main/cluster-deploy.sh
+sudo chmod +x cluster-deploy.sh
+
 echo "# microk8s..."
 sudo snap install microk8s --classic --channel=1.20
 mkdir -p $HOME/.kube/
